@@ -107,3 +107,51 @@ const checkTemperature = (temperature) => {
   }
   return message;
 };
+
+
+//Operador AND (&&) y OR (||)
+/*
+Operador de cortocircuito.
+
+ OP1 && OP2 Si OP1 es verdadero, se retorna la expresión de OP2.
+ OP1 || OP2 Si OP1 es verdadero, se retorna la expresión de OP1.
+ 
+ Se consideran falsos: "", 0, null, undefined, NaN
+*/
+console.log( true && false ); // false
+console.log( true && "Usando corto circuito "); // "Usando corto circuito "
+console.log( "false" && "Mi mente sigue de vacaciones"); // "Mi mente sigue de vacaciones"
+console.log( 0 && "Chau, chau"); // 0
+console.log( "" && "Chau, chau"); // ""
+console.log( false && "Chau, chau"); // false
+
+console.log( true || false ); // true
+console.log( true || "Usando corto circuito "); // true
+console.log( "false" || "Mi mente sigue de vacaciones"); // "false"
+console.log( 0 || "Chau, chau"); // "Chau, chau"
+console.log( "" || "Chau, chau"); // "Chau, chau"
+console.log( false || "Chau, chau"); // "Chau, chau"
+console.log( false || undefined ); // undefined
+
+console.log( "Activado" && undefined ); // undefined
+
+const isLoggedIn = true;
+if(isLoggedIn) {
+    console.log("El usuario está logueado");
+}  else {
+    console.log("El usuario no está logueado");    
+}
+
+console.log( isLoggedIn && "El usuario está logueado" || "El usuario no está logueado" ); 
+
+
+
+/*
+     Realizar una función que reciba un código(weatherCode) de temperatura.
+     De acuerdo al código recibo, retornar un mensaje:
+     Code	Description
+    0	        Clear sky
+    1, 2, 3	    Mainly clear, partly cloudy, and overcast
+    45, 48	    Fog and depositing rime fog
+    
+*/
