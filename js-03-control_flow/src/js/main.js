@@ -86,3 +86,10 @@ console.log(alias); // Serchmo
 
  Imprimir el valor del retorno por consola.
 */
+
+
+/*
+ Realizar una función que reciba el valor booleano si una persona está feliz o no
+ Si la persona está feliz, mostrar en la interfaz de usuario la imagen "public/images/dino.jpg"
+ En caso contrario mostrar la imagen "public/images/dino-emo.png"
+*/
