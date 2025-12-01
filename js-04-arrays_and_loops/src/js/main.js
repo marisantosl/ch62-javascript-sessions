@@ -29,3 +29,33 @@ const numbers = new Array(5); // array with 5 empty slots [ <5 empty items> ]
 // [length - 1] -> Último elemento
 
 const techStack = ["HTML", "CSS", "JavaScript"];
+console.log(`accediendo al primer elemento de mi arreglo ${techStack[0]}`);
+
+//accediendo al 2 elemento
+console.log(`accediendo al primer elemento de mi arreglo ${techStack[1]}`);
+
+//accediendo al ultimo (longitud menos 1)
+console.log(`accediendo al ultimo elemento de mi arreglo ${techStack[techStack.length-1]}`);
+
+// --- 3. Modificación de Elementos ---
+techStack[1] = "Sass"; // Cambiando "CSS" por "Sass"
+console.log("Después de la modificación:", techStack); // ["HTML", "Sass", "JavaScript"]
+
+//Agrega un nuevo elemento al final
+techStack[techStack.length]= "TypeScript";
+
+//techStack[3] con este nno es recomendado poque no sabes cual es el último elemento a veces
+
+/* ================================================================
+   BLOQUE 2: MÉTODOS DE ARRAYS (Add/Remove) 
+   ================================================================
+   JavaScript nos da métodos para manipular la lista como una pila o cola.
+*/
+const shoppingList = ["Leche", "Huevos"];
+// 1. push(): Agrega al FINAL (El más usado)
+// Retorna la nueva longitud del array.
+shoppingList.push("Pan"); 
+console.log("Push:", shoppingList); // ["Leche", "Huevos", "Pan"]
+// 2. unshift(): Agrega al INICIO (Mueve todos los índices, es más lento)
+shoppingList.unshift("Café");
+console.log("Unshift:", shoppingList); // ["Café", "Leche", "Huevos", "Pan"]
