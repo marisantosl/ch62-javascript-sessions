@@ -344,3 +344,34 @@ console.log(evaluarElNumeroSwitch(-45) ); // Negativo
 console.log(evaluarElNumeroSwitch(0) ); // Cero
 console.log(evaluarElNumeroSwitch(45) ); // Positivo
 console.log(evaluarElNumeroSwitch(100) ); // Grande
+
+
+
+// ------------------------ Operador ternario --------------------------
+/*
+ Es el único operador de JavaScript que tiene 3 operandos.
+ Generalmente se utiliza como opción a la sentencia if-else.
+
+ Sintaxis:
+  condición ? expresiónSiCondiciónEsVerdadera : expresionSiCondiciónEsFalsa; 
+
+*/
+
+
+const votingEligibility = (age) => {
+    return age >= 18 ? "Puede votar" : "No puede votar";
+}
+
+console.log(votingEligibility(20)); // Puede votar
+console.log(votingEligibility(16)); // No puede votar
+
+/*
+ Realizar una función que reciba un número y retorne
+ "Par" si el número es par o "Impar" si el número es impar.
+ Usar el operador ternario.
+*/
+const numParImpar = (numero) => {
+    return numero %2 === 0 ? "Es numero par" : "Es numero impar"
+}
+console.log(numParImpar(7));
+console.log(numParImpar(2));
