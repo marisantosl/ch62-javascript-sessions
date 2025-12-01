@@ -67,39 +67,23 @@ console.log(areaRectangulo(5, 10));
 const calculate = (a, b, operationFunction) => {
     return operationFunction(a, b);
 };
-//console.log(`Usando incorrectamente la función: ${calculate( 5, 3, 10)}`); //operationFunction is not a function at calculate (main.js:68:12) at main.js:70:51
 
-const substract = (a,b) => a-b;
-const multiply = (a,b) => a * b;
-const suma = (a,b) => a + b;
+// console.log(`Usando incorrectamente la función: ${calculate( 5, 3, "sum")}`); // operationFunction is not a function
 
-//crear una función de suma
-console.log(`Realizando una resta: ${calculate(5,3,substract)}`);
-console.log(`Realizando una multiplicacion: ${calculate(5,3,multiply)}`);
-console.log(`Realizando una suma: ${calculate(5,3,suma)}`);
-//aplicar a la funcion calculate la funcion suma
+// 2. Definimos operaciones básicas
+const subtract = (a, b) => a - b;
+const multiply = (a, b) => a * b;
+// Crear una función que sume dos números
+const sum = (a, b) => a + b;
+const divide = (a, b) => a / b;
 
-var a = 10;  //variable global, no variable de funcion
-let b = 20;
-const c = 30;
-const d = 40;
-const e = 50;
-const f = 60;
-const g = 70; //El alcance de esta variable es global, entra en la funcion cambiarValores porque no hay otra variable g dentro de la funcion
 
-const cambiarValores = (a, b, c) => {  //No confundir, aunque se llamen igual, estas variables a,b,c son locales a la funcion cambiarValores, no son las mismas que las globales declaradas arriba
+console.log(`Realizando una resta: ${calculate(5, 3, subtract)}`); // 2
+console.log(`Realizando una multiplicación: ${calculate(5, 3, multiply )}`); // 15
+// Aplicar a la función calculate la función suma
+console.log(`Realizando una suma: ${calculate(5, 3, sum )}`); // 8
+console.log(`Realizando una división: ${calculate(6, 3, divide )}`); // 2
 
-  /*
-
-  Muchas instrucciones
-
-  */
-    a = 100; //Cambia solo la copia local, no la variable global
-    b = 200; //Cambia solo la copia local, no la variable global
-    c = 300; //Cambia solo la copia local, no la variable global
-    var d = 400; //Variable local a la funcion
-    let e = 500; //Variable local a la funcion
-    const f = 600; //Variable local a la funcion
-    console.log (a,b,c);
-
-};
+// Aplicar una función que calcule la potencia de un número
+console.log(`Realizando una división: ${calculate(6, 3, (a, b) => a ** b ) }`); // Math.pow(a,b) 
+// Aplicar una función que calcule el residuo de una devisión, para saber si 6 es divisible entre 3
