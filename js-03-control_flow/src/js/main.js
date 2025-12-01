@@ -370,8 +370,7 @@ console.log(votingEligibility(16)); // No puede votar
  "Par" si el número es par o "Impar" si el número es impar.
  Usar el operador ternario.
 */
-const numParImpar = (numero) => {
-    return numero %2 === 0 ? "Es numero par" : "Es numero impar"
+const numerosPar = (num) => {
+    return num%2 === 0 ? "El número es par ;)" : "No es par :v";
 }
-console.log(numParImpar(7));
-console.log(numParImpar(2));
+console.log(numerosPar(14));
