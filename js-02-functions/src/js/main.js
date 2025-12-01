@@ -87,3 +87,28 @@ console.log(`Realizando una división: ${calculate(6, 3, divide )}`); // 2
 // Aplicar una función que calcule la potencia de un número
 console.log(`Realizando una división: ${calculate(6, 3, (a, b) => a ** b ) }`); // Math.pow(a,b) 
 // Aplicar una función que calcule el residuo de una devisión, para saber si 6 es divisible entre 3
+console.log(`residuo de 7 entre 3 ${calculate(7, 3, (a,b)=> a%b )}`); // 1
+
+var a = 10;
+let b = 20;
+const c = 30;
+const d = 40;
+const e = 50;
+const f = 60;
+const g = 70;
+
+
+const cambiarValores = (a, b, c) => {
+  /*
+
+   Muchas instrucciones
+
+  */ 
+  a = 100;
+  b = 200;
+  c = 300;
+  var d = 400;
+  let e = 500;
+  const f = 600;
+  console.log(a, b, c);
+}
