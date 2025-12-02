@@ -86,7 +86,7 @@ console.log("Colores iniciales:", colors.join(" - ") ); // "Rojo - Verde - Azul 
 colors.splice(2, 0, "Rosa", "Cian");
 console.log("Después de agregar con splice:", colors.toString() );
 
-// TODO EJERCICIO RÁPIDO:
+
 // 1. Crea un array 'guestList' con 2 nombres.
 // 2. Agrega un invitado al final.
 // 3. Agrega un invitado al principio
@@ -99,6 +99,27 @@ guestList.unshift("Lucas"); //Lucas, José, María, Lucia
 guestList.splice(1,1, "David") //Lucas, David, María, Lucia
 console.log("Lista de invitados:", guestList.join(" - ")); //Lucas - David - María - Lucia
 
+/*================================================================
+   BLOQUE 3: ESTRUCTURAS DE DATOS - PILAS Y COLAS 
+   ================================================================
+   Las pilas y colas son estructuras de datos que organizan cómo se 
+   almacenan y acceden a los elementos.
+
+   1. LIFO (Last-In, First-Out) - Pila (Stack)
+   Concepto: El último elemento en entrar es el primero en salir.
+*/
+
+// Navegamos a sitios (push)
+const historyStack = [];
+historyStack.push("google.com");
+historyStack.push("youtube.com");
+historyStack.push("github.com");
+
+console.log("Historial actual:" + historyStack); // ["google.com", "youtube.com", "github.com"]
+
+// Presiono el botón de "atrás"
+console.log(`Regresando a: ${ historyStack.pop() }`); // "github.com"
+
 /*   2. FIFO (First-In, First-Out) - Cola (Queue)
    Concepto: El primer elemento en entrar es el primero en salir.
 */
@@ -106,9 +127,12 @@ const printQueue = [];
 printQueue.push("thesis.pdf");
 printQueue.push("meme.png");
 printQueue.push("invoice.docx");
+
 console.log("Cola de impresión:", printQueue); // ["thesis.pdf", "meme.png", "invoice.docx"]
+
 // La impresora termina el primer trabajo (shift)
 const printingNow = printQueue.shift();
+
 console.log(`Imprimiendo: ${printingNow}`); // thesis.pdf (El primero que llegó)
 
 /* ================================================================
@@ -117,6 +141,7 @@ console.log(`Imprimiendo: ${printingNow}`); // thesis.pdf (El primero que llegó
    1. Agrega 3 tareas usando 'push'.
    2. Muestra la lista completa de tareas.
    3. Las tareas normales se atienden en orden de llegada (FIFO)
+   3.1 Retira (elimina) la primera tarea de la lista y muéstrala.
    4. No dan un tarea URGENTE que debe ser atendido inmediatamente.
     Por lo que debes poner al inicio de la lista.
    5. Muestra la lista actualizada.
