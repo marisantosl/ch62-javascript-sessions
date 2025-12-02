@@ -157,3 +157,78 @@ console.log("Lista de tareas actualizada:", taskList.join("-"));
 const tareaRealizada = taskList.shift();
 console.log(`Primer tarea realizada: ${tareaRealizada}`);
 console.log("Tareas pendientes", taskList.join("-"));
+
+
+/* ================================================================
+   BLOQUE 3: BUCLES (LOOPS) 
+   ================================================================
+   Estructuras que repiten un bloque de código mientras una condición sea verdadera.
+*/
+// --- 1. Ciclo FOR (Controlado) ---
+// Úsalo cuando sabes cuántas veces quieres repetir algo (ej. recorrer un array).
+// Sintaxis: for (expresión_inicial; condición; expresión_final) { ... }
+// Imprimier los números del 1 al 5
+for(let i = 1; i <=5 ; i++ ) {
+    console.log(`Número ${i}`);
+}
+
+
+// ------------------- Uso de break en ciclos ----------------------------
+// break detiene la ejecución de la iteración en curso y termina el ciclo.
+for(let i = 1; i <=10 ; i++ ) {
+    if(i === 6) {
+        console.log("¡Se alcanzó el número 6");
+        break; 
+    }
+      console.log(`(con break) Número ${i}`);
+}
+
+
+// =============================================
+let iteracion = 0;
+for (  ;   ;  ){
+    console.log( `Núm de iteración: ${iteracion}` ); // 0 , 1, 2, 3, 4
+    iteracion++;
+    if ( iteracion === 5 ){
+        break;
+    }
+}
+
+// =====================================================
+let myIteration; 
+for (myIteration = 0; myIteration <= 5; myIteration++) {
+    console.log("For loop", myIteration ); // 0 , 1, 2
+     if( myIteration === 2) break;  
+}
+console.log("Final", myIteration); //  2
+
+// =====================================================
+ let jiteration;
+for ( jiteration = 0; jiteration < 3; jiteration++ ) {
+   console.log("For loop", jiteration ); //
+}
+console.log("Final", jiteration); //
+
+
+// --- 2. Ciclo WHILE (Basado en condición) ---
+// Úsalo cuando NO sabes cuántas veces se repetirá, depende de algo externo.
+// Cuidado: Si la condición nunca es falsa, creas un bucle infinito (Infinite Loop).
+
+//while(  confirm("¿Quieres tu número de la suerte")  ){
+ //   const numeroSuerte = Math.random(); // 0....1.0(sin incluir 1.0)
+//    console.log("Tu número de la suerte es: " + numeroSuerte);
+//}
+//console.log("Gracias por participar");
+
+let numerow = 1;
+
+while(numerow<=5){
+   console.log("numero: ", numerow)
+   numerow ++;
+}
+
+const countries = ["México", "USA", "Canada", "Japón"]
+for (let index = 0; index < countries.length; index++) {
+   const element = countries[index];
+   
+}
