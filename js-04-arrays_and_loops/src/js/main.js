@@ -122,3 +122,13 @@ console.log(`Imprimiendo: ${printingNow}`); // thesis.pdf (El primero que llegó
    5. Muestra la lista actualizada.
    6. Atiende (elimina) la primera tarea de la lista y muéstrala.
 */
+const taskList = [];
+taskList.push("Limpiar la cocina");
+taskList.push("Barrer");
+taskList.push("Lavar ropa");
+console.log("Lista de tareas:", taskList.join("-"));
+taskList.unshift("Hacer el desayuno");
+console.log("Lista de tareas actualizada:", taskList.join("-"));
+const tareaRealizada = taskList.shift();
+console.log(`Primer tarea realizada: ${tareaRealizada}`);
+console.log("Tareas pendientes", taskList.join("-"));
