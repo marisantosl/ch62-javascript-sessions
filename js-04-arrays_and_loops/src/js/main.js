@@ -75,3 +75,9 @@ console.log("Lista actual:", shoppingList);
 // 4. shift(): Elimina el PRIMERO y lo devuelve
 const firstRemoved = shoppingList.shift();
 console.log(`Eliminado con shift: ${firstRemoved}`); // "Café"
+
+// --- Método splice() ---
+// Permite eliminar o agregar elementos en cualquier posición
+const colors = ["Rojo", "Verde", "Azul", "Amarillo", "Morado", "Naranja"];
+
+// Agregar 2 colores a la 
