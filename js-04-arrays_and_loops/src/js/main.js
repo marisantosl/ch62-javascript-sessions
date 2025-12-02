@@ -79,5 +79,46 @@ console.log(`Eliminado con shift: ${firstRemoved}`); // "Café"
 // --- Método splice() ---
 // Permite eliminar o agregar elementos en cualquier posición
 const colors = ["Rojo", "Verde", "Azul", "Amarillo", "Morado", "Naranja"];
+console.log("Colores iniciales:", colors.toString() ); // "Rojo,Verde,Azul,Amarillo,Morado,Naranja"
+console.log("Colores iniciales:", colors.join(" - ") ); // "Rojo - Verde - Azul - Amarillo - Morado - Naranja"
 
-// Agregar 2 colores a la 
+// Agregar 2 elementos en el índice 2, sin eliminar otros elementos
+colors.splice(2, 0, "Rosa", "Cian");
+console.log("Después de agregar con splice:", colors.toString() );
+
+// TODO EJERCICIO RÁPIDO:
+// 1. Crea un array 'guestList' con 2 nombres.
+// 2. Agrega un invitado al final.
+// 3. Agrega un invitado al principio
+// 4. Elimina al segundo invitado (índice 1) y agrega a otro en su lugar.
+// 4. Muestra la lista final.
+
+const guestList = ["José","María"];
+guestList.push("Lucia"); //José, María, Lucia
+guestList.unshift("Lucas"); //Lucas, José, María, Lucia
+guestList.splice(1,1, "David") //Lucas, David, María, Lucia
+console.log("Lista de invitados:", guestList.join(" - ")); //Lucas - David - María - Lucia
+
+/*   2. FIFO (First-In, First-Out) - Cola (Queue)
+   Concepto: El primer elemento en entrar es el primero en salir.
+*/
+const printQueue = [];
+printQueue.push("thesis.pdf");
+printQueue.push("meme.png");
+printQueue.push("invoice.docx");
+console.log("Cola de impresión:", printQueue); // ["thesis.pdf", "meme.png", "invoice.docx"]
+// La impresora termina el primer trabajo (shift)
+const printingNow = printQueue.shift();
+console.log(`Imprimiendo: ${printingNow}`); // thesis.pdf (El primero que llegó)
+
+/* ================================================================
+ Ejercicio:
+   Crea un array llamado 'taskList' para gestionar tareas.
+   1. Agrega 3 tareas usando 'push'.
+   2. Muestra la lista completa de tareas.
+   3. Las tareas normales se atienden en orden de llegada (FIFO)
+   4. No dan un tarea URGENTE que debe ser atendido inmediatamente.
+    Por lo que debes poner al inicio de la lista.
+   5. Muestra la lista actualizada.
+   6. Atiende (elimina) la primera tarea de la lista y muéstrala.
+*/
