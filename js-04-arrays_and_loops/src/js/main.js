@@ -147,7 +147,6 @@ console.log(`Imprimiendo: ${printingNow}`); // thesis.pdf (El primero que llegó
    5. Muestra la lista actualizada.
    6. Atiende (elimina) la primera tarea de la lista y muéstrala.
 */
-<<<<<<< HEAD
 const taskList = [];
 taskList.push("Limpiar la cocina");
 taskList.push("Barrer");
@@ -158,24 +157,6 @@ console.log("Lista de tareas actualizada:", taskList.join("-"));
 const tareaRealizada = taskList.shift();
 console.log(`Primer tarea realizada: ${tareaRealizada}`);
 console.log("Tareas pendientes", taskList.join("-"));
-=======
-// Crea un array llamado 'taskList' para gestionar tareas.
-   const taskList = [];
-// 1. Agrega 3 tareas usando 'push'.
-   taskList.push("Barrer", "Trapear", "Sacudir");
-// 2. Muestra la lista completa de tareas.
-   console.log("Lista de tareas inicial: " + taskList.join(", "));
-// 3. Las tareas normales se atienden en orden de llegada (FIFO)
-// 3.1 Retira (elimina) la primera tarea de la lista y muéstrala.
-   console.log("Tarea completada: " + taskList.shift());
-// 4. No dan una tarea URGENTE que debe ser atendida inmediatamente. Por lo que debes ponerla al inicio de la lista.
-   taskList.unshift("Limpiar arenero");
-// 5. Muestra la lista actualizada.
-   console.log("Tarea URGENTE añadida, lista de tareas actualizada: " + taskList.join(", "));
-// 6. Atiende (elimina) la primera tarea de la lista y muéstrala.
-   console.log("Tarea URGENTE completada: " + taskList.shift());
-   console.log("Lista de tareas final: " + taskList.join(", "));
->>>>>>> upstream/serch
 
 
 /* ================================================================
@@ -251,3 +232,20 @@ for (let index = 0; index < countries.length; index++) {
    const element = countries[index];
    
 }
+
+
+
+// Tienes un array de movimientos: [100.00, -50.00, 200.00, -100.00]
+// 1. Usa un ciclo FOR, o WHILE o FOR-OF para recorrer los movimientos.
+// 2. Suma los valores a una variable 'totalBalance'.
+// 3. Imprime el balance final.
+const transactions = [100.00, -50.00, 200.00, -100.00, 500.00];
+let totalBalance = 0;
+
+for (i = 0; i < transactions.length; i++){
+   totalBalance += transactions[i];
+   
+}
+console.log("El total es: ", totalBalance);
+
+transactions.forEach((transaction, index, array)=>totalBalance += transaction);
